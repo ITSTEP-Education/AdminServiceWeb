@@ -1,4 +1,4 @@
-import { Contacts, ContactsInfo, CopyrightSection, HighlitedColon, Links, Number, Numbers, SocialLinks, StyledFooterContainer, TitlesOfContactInfo } from "./FooterStyles";
+import { Contacts, ContactsInfo, CopyrightSection, HighlitedColon, Links, ListGroupItems, Number, Numbers, SocialLinks, StyledFooterContainer, TitlesOfContactInfo } from "./FooterStyles";
 import facebook from '../assets/images/footer_icons/facebook_i.png'
 import instagram from '../assets/images/footer_icons/instagram_i.png'
 import telegram from '../assets/images/footer_icons/telegram_i.png'
@@ -13,9 +13,9 @@ function Footer() {
             <Contacts>
                 <h2>Контакти</h2>
                 <ContactsInfo>
-                    <ListGroup.Item>
+                    <ListGroupItems>
                         <TitlesOfContactInfo>
-                        Email<HighlitedColon>:</HighlitedColon></TitlesOfContactInfo> logoacademy@gmail.com </ListGroup.Item>
+                        Email<HighlitedColon>:</HighlitedColon></TitlesOfContactInfo> logoacademy@gmail.com </ListGroupItems>
                     
                     <Number>
                         <TitlesOfContactInfo>
@@ -27,11 +27,11 @@ function Footer() {
                        </Numbers>
                     </Number>
 
-                    <ListGroup.Item>
+                    <ListGroupItems>
                         <TitlesOfContactInfo> Адреса<HighlitedColon>:</HighlitedColon> </TitlesOfContactInfo>
-                         м.Київ, вул.Хороброго 5  </ListGroup.Item>
+                         м.Київ, вул.Хороброго 5  </ListGroupItems>
                     
-                    <ListGroup.Item>
+                    <ListGroupItems>
                         <TitlesOfContactInfo>
                              Соцмережі<HighlitedColon>:</HighlitedColon>
                         </TitlesOfContactInfo>
@@ -45,7 +45,7 @@ function Footer() {
                     </SocialLinks>
                       
                  
-                    </ListGroup.Item>
+                    </ListGroupItems>
                 </ContactsInfo>
             </Contacts>
             <CopyrightSection><h4>LOGO</h4><TitlesOfContactInfo>© 

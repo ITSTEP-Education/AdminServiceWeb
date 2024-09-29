@@ -1,7 +1,7 @@
-import { Container, ListGroup } from "react-bootstrap";
+import { Container, ListGroup, Navbar } from "react-bootstrap";
 import styled from "styled-components";
 
-export const StyledFooterContainer = styled(Container)`
+export const StyledFooterContainer = styled(Navbar)`
   background: #757575;
   padding: 2em;
   height: auto;
@@ -41,19 +41,24 @@ export const ContactsInfo = styled(ListGroup)`
     gap: 0.7em;
   }
 `;
+export const ListGroupItems = styled(ListGroup.Item)`
+background-color: transparent; 
+ border: none;
+`;
+
 export const SocialLinks = styled(ListGroup)`
   display: inline-block;
 `;
 
-export const Links = styled(ListGroup.Item)`
+export const Links = styled(ListGroupItems)`
   display: inline;
   padding: 3em;
 `;
 
-export const Numbers = styled(ListGroup.Item)`
+export const Numbers = styled(ListGroupItems)`
   display: inline;
 `;
-export const Number = styled(ListGroup.Item)`
+export const Number = styled(ListGroupItems)`
   display: flex;
 `;
 
