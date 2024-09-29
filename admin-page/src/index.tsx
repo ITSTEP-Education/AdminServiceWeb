@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Footer from './footer/FooterComponent';
+import Header from './header/HeaderComponent';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -10,6 +11,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <h3>Admin Page</h3>
+    <Header></Header>
     <Footer></Footer>
   </React.StrictMode>
 );
