@@ -6,7 +6,7 @@ export const StyledFooterContainer = styled(Navbar)`
   padding: 2em;
   height: auto;
   width: 100%;
-  display:flex;
+  display:block;
   flex-wrap:wrap;
   align-items: center;
 `;
