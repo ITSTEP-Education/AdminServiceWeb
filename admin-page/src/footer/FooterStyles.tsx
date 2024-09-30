@@ -6,6 +6,9 @@ export const StyledFooterContainer = styled(Navbar)`
   padding: 2em;
   height: auto;
   width: 100%;
+  display:block;
+  flex-wrap:wrap;
+  align-items: center;
 `;
 
 export const Contacts = styled(Container)`
@@ -66,4 +69,5 @@ export const CopyrightSection = styled(Container)`
   text-align: center;
   color: #e6e6e6;
   font-size: 1.1em;
+  display:block !important;
 `;
