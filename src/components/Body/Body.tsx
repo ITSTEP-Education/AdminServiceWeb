@@ -13,7 +13,7 @@ const Body = () => {
     return (
         <>
             <div className='mainPage'>
-
+                
                 <Title />
                 <Authentication />
                 <Market />
@@ -27,6 +27,7 @@ const Body = () => {
                     phone="+3 80501112233"
                     avatarUrl="https://via.placeholder.com/150" // Замените на реальный URL изображения
                 />
+
             </div>
 
 

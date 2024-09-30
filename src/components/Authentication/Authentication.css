@@ -18,7 +18,7 @@ position: relative;
     line-height: 48px;
     letter-spacing: -0.022em;
     text-align: left;
-    color: #1E1E1E;
+    color: #1E1E1E !important;
     width: 221.26px;
     height: 48px;
     margin-left: 24px;
