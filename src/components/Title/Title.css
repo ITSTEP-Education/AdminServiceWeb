@@ -1,0 +1,19 @@
+h1 {
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 48px;
+    letter-spacing: -0.011em;
+    text-align: left;
+    color:  #E6E6E6;
+    ;
+  }
+  .title {
+    width: 337px;
+    height: 144px;
+    gap: 0px;
+    opacity: 0px;
+    position: relative;
+    left : 65px;
+    top : 69px;
+  }
