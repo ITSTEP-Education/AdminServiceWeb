@@ -8,7 +8,7 @@ import ListOrders from '../List/List';
 import RegisterForm from '../RegisterForm/RegisterForm';
 import SearchForm from '../SearchForm/SearchForm';
 import ProfileCard from '../ProfileCard/ProfileCard';
-
+import { Display } from '../styles/General.styled';
 
 const Admin: FC = () => {
     return (
@@ -19,14 +19,18 @@ const Admin: FC = () => {
             <Market />
             <ImageForTitle />
             <ListOrders />
-            <RegisterForm />
-            <SearchForm />
-            <ProfileCard
-                name="Олена Баговець"
-                age={22}
-                phone="+3 80501112233"
-                avatarUrl="https://via.placeholder.com/150" // Замените на реальный URL изображения
-            />
+            <Display>
+                <RegisterForm/>
+                <Display _direction='column' style={{padding: '25px', backgroundColor: '#312D2D', position: 'relative', top: '100px', right: '220px', minHeight: '300px'}}>
+                    <SearchForm />
+                    <ProfileCard
+                        name="Олена Баговець"
+                        age={22}
+                        phone="+3 80501112233"
+                        avatarUrl="https://via.placeholder.com/150" // Замените на реальный URL изображения
+                    />
+                </Display>
+            </Display>
         </div>
     )
 }

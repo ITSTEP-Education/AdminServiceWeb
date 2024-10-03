@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {FC} from 'react';
 import './SearchForm.css'; 
 
-const SearchForm = () => {
+const SearchForm: FC = () => {
   return (
     <div className="search-container">
       <input type="text" placeholder="Ім'я" className="input-field" />

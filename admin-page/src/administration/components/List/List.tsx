@@ -1,6 +1,7 @@
 import React, {FC, useEffect, useState} from "react";
 import ListTitle from "./ListTitle";
 import ListRow from "./ListRow";
+import './List.css';
 
 const ListOrders: FC = () => {
 
@@ -31,8 +32,10 @@ const ListOrders: FC = () => {
                 <button className="download-button" onClick={handleDisplay}>{btnTitle}</button>
             </div>
             <div style={{display: display}}>
-                <ListTitle/>
-                <ListRow/>
+                <table>
+                    <ListTitle/>
+                    <ListRow isLoad={isDisplay}/>
+                </table>
             </div>
         </div>
     );
