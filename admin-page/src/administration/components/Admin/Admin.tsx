@@ -4,7 +4,7 @@ import './Admin.css'
 import Authentication from '../Authentication/Authentication';
 import Market from '../Market/Market';
 import ImageForTitle from '../ImageForTitle/ImageForTitle';
-import List from '../List/List';
+import ListOrders from '../List/List';
 import RegisterForm from '../RegisterForm/RegisterForm';
 import SearchForm from '../SearchForm/SearchForm';
 import ProfileCard from '../ProfileCard/ProfileCard';
@@ -18,7 +18,7 @@ const Admin: FC = () => {
             <Authentication />
             <Market />
             <ImageForTitle />
-            <List />
+            <ListOrders />
             <RegisterForm />
             <SearchForm />
             <ProfileCard
