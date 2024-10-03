@@ -1,7 +1,7 @@
 import React from 'react';
 import './Market.css';
-import GooglePlay from '../../img/Google.png';
-import AppStore from '../../img/AppStore.png';
+import GooglePlay from '../../assets/images/Google.png';
+import AppStore from '../../assets/images/AppStore.png';
 const Market = () => {
     return (
         <div className="market">

@@ -1,7 +1,7 @@
 import React from "react";
 import './ImageForTitle.css';
-import imageForTitleOne from '../../img/imageForTitleOne.png';
-import imageForTitleTwo from '../../img/imageForTitleTwo.png';
+import imageForTitleOne from '../../assets/images/imageForTitleOne.png';
+import imageForTitleTwo from '../../assets/images/imageForTitleTwo.png';
 const ImageForTitle = () => {
     return (
         <div className="ImageForTitle">
