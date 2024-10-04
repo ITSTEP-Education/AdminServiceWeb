@@ -6,9 +6,8 @@ import Market from '../Market/Market';
 import ImageForTitle from '../ImageForTitle/ImageForTitle';
 import ListOrders from '../List/LIstOrders';
 import RegisterForm from '../RegisterForm/RegisterForm';
-import SearchForm from '../SearchForm/SearchForm';
-import ProfileCard from '../ProfileCard/ProfileCard';
 import { Display } from '../styles/General.styled';
+import ClientData from '../ClientData/ClientData';
 
 export const GuidOrderContext = createContext((e: React.FormEvent<HTMLElement>):void =>{});
 export const GuidToNoneContext = createContext(():void => {});
@@ -39,14 +38,8 @@ const Admin: FC = () => {
             </GuidToNoneContext.Provider>
             <Display>
                 <RegisterForm guid={guid}/>       
-                <Display _direction='column' style={{padding: '25px', backgroundColor: '#312D2D', position: 'relative', top: '100px', right: '220px', minHeight: '300px'}}>
-                    <SearchForm />
-                    <ProfileCard
-                        name="Олена Баговець"
-                        age={22}
-                        phone="+3 80501112233"
-                        avatarUrl="https://via.placeholder.com/150" // Замените на реальный URL изображения
-                    />
+                <Display _direction='column'>
+                    <ClientData/>
                 </Display>   
             </Display>
         </div>

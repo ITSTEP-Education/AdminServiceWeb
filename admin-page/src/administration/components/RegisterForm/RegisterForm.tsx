@@ -114,7 +114,7 @@ const RegisterForm: FC<TRegisterForm> = (props) => {
             <span className="required">*</span>
           </div>
           <p className="note">* Ці поля повинні бути заповнені</p>
-          <p>order: {props.guid}</p>
+          <p>selected: {props.guid}</p>
           <button type="button" className="register-button" onClick={handleRegister}>ЗАРЕЄСТРУВАТИ</button>
         </div>
       </form>

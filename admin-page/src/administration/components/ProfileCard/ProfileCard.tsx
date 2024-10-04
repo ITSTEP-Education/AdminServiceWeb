@@ -1,22 +1,19 @@
 import React from 'react';
 import './ProfileCard.css';
 
-interface ProfileCardProps {
-  name: string;
-  age: number;
-  phone: string;
-  avatarUrl: string;
+interface IProfileCard {
+  userName: string | null,
 }
 
-const ProfileCard: React.FC<ProfileCardProps> = ({ name, age, phone, avatarUrl }) => {
+const ProfileCard: React.FC<IProfileCard> = ({userName}) => {
   return (
     <div className="profile-card">
       <div className="profile-details">
-        <img className="avatar" src={avatarUrl} alt={`${name}'s avatar`} />
+        <img className="avatar" src={'https://via.placeholder.com/150'} alt={`${userName || 'none'}'s avatar`}/>
         <div className="profile-info">
-          <h2>{name}</h2>
-          <p>{age} роки</p>
-          <p>{phone}</p>
+          <h2>{userName || 'Ім\'я Фамилія'}</h2>
+          <p>вік, роки</p>
+          <p>моб. телефон</p>
         </div>
       </div>
       <div className="actions">
