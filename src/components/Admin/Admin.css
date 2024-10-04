@@ -1,0 +1,21 @@
+
+
+Body {
+      
+    opacity: 0px;
+    border-radius: 6px 0px 0px 0px;
+    background-color:#1E1E1E;
+
+   }
+
+   .mainPage {
+    width: 1440px;
+    height: 1953px;
+    left:calc((100% - 1440px) / 2);
+    opacity: 0px;
+    border-radius: 6px;
+    border: 2px solid;
+    background-color:#1E1E1E;
+    border-color: #1E1E1E;
+    position:relative;
+   }

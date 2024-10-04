@@ -1,0 +1,70 @@
+.profile-card {
+    width: 300px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: 750px;
+    top: -50px;
+  }
+  
+  .profile-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .profile-info h2 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  .profile-info p {
+    margin: 5px 0;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .edit-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 120px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 120px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .edit-btn:hover {
+    background-color: #218838;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c82333;
+  }
+  
