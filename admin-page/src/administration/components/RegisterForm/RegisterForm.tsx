@@ -40,25 +40,6 @@ const RegisterForm: FC<TRegisterForm> = (props) => {
     (e.currentTarget.parentElement?.parentElement as HTMLFormElement).reset();
   }
 
-  const handlePostClientData = (clientData: TClientData |null): void => {
-
-    const postClientData = axios.create({
-      baseURL: 'https://localhost:7209/api/v2/Administrate',
-      method: 'post',
-      responseType: 'json',
-    });
-  
-    postClientData.post(`client-data?guid=${props.guid}`, clientData)
-    .then(responce => {
-      console.log(responce.data);
-      setIsposted(true);
-    })
-    .catch(error => {
-      console.log(error);
-      setIsposted(false);
-    });
-  }
-
   const handleDeleteOrder = () => {
     const deleteClientData = axios.create({
       baseURL: 'https://localhost:7209/api/v1/Administrate',
@@ -75,13 +56,26 @@ const RegisterForm: FC<TRegisterForm> = (props) => {
     });
   }
 
+  const handlePostClientData = (clientData: TClientData |null): void => {
+
+    const postClientData = axios.create({
+      baseURL: 'https://localhost:7209/api/v2/Administrate',
+      method: 'post',
+      responseType: 'json',
+    });
+  
+    postClientData.post(`client-data?guid=${props.guid}`, clientData)
+    .then(responce => {
+      setIsposted(true);
+      handleDeleteOrder();
+    })
+    .catch(error => {
+      setIsposted(false);
+    });
+  }
+
   useEffect(() => {
     handlePostClientData(clientData);
-
-    if(isposted){
-      handleDeleteOrder();
-    }
-
   }, [clientData]);
 
   return (

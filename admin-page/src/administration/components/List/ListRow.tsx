@@ -18,7 +18,6 @@ interface IError {
 
 type TListRow = {
     isLoad: boolean,
-    // _handleGuid: (e: React.FormEvent<HTMLElement>) => void,
 }
 
 const ListRow: FC<TListRow> = (props) => {
@@ -34,7 +33,6 @@ const ListRow: FC<TListRow> = (props) => {
     });
 
     const handleRequest = () => {
-        // console.log('get product-orders');
 
         if(props.isLoad){
             productOrderRequest.get('product-orders')
@@ -51,7 +49,7 @@ const ListRow: FC<TListRow> = (props) => {
 
     useEffect(() => {
         handleRequest();
-    }, [props.isLoad]);
+    }, [props.isLoad, productOrders]);
 
     return (
         <tbody>
