@@ -1,11 +1,11 @@
 import React, {FC} from 'react';
 import './SearchForm.css'; 
 
-interface ISearcForm {
+type TSearcForm = {
   handleUserName: (e: React.FormEvent<HTMLElement>) => void,
 }
 
-const SearchForm: FC<ISearcForm> = (props) => {
+const SearchForm: FC<TSearcForm> = (props) => {
 
   return (
     <form className="search-container">
