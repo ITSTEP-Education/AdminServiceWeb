@@ -40,15 +40,10 @@ const ClientData: FC = () => {
             setUserName(`${values[0]}-${values[1]}`);
             const data = await getClientDataByName(`${values[0]}-${values[1]}`);
             setClientData(data);
-        }    
+        } 
+        
+        console.log(clientData);
     }
-
-    useEffect(()=> {
-        if(userName != null){
-
-        }
-
-    }, [userName]);
 
     return(
         <ClientDataWrapper>
