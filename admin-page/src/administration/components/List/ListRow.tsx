@@ -1,6 +1,7 @@
-import React, {FC, useState, useEffect} from "react";
+import React, {FC, useState, useEffect, useContext} from "react";
 import axios from "axios";
-import './List.css';
+import './ListOrders.css';
+import { GuidOrderContext } from "../Admin/Admin";
 
 interface ProductOrder {
     name: string;
@@ -17,12 +18,14 @@ interface IError {
 
 type TListRow = {
     isLoad: boolean,
+    // _handleGuid: (e: React.FormEvent<HTMLElement>) => void,
 }
 
 const ListRow: FC<TListRow> = (props) => {
 
     const [productOrders, setProductOrders] = useState<Array<ProductOrder>>([]);
     const [productError, setProductError] = useState<IError | null>(null)
+    const handleGuid = useContext(GuidOrderContext);
 
     const productOrderRequest = axios.create({
         baseURL: 'https://localhost:7209/api/v1/Administrate',
@@ -53,14 +56,14 @@ const ListRow: FC<TListRow> = (props) => {
     return (
         <tbody>
             {productOrders.map((order, i) => (
-                <tr key={i + 1} onClick={() => {console.log('call handleClientOrder')}}>
-                <td>{i + 1}</td>
-                <td>{order.name}</td>
-                <td>{order.typeEngeeniring}</td>
-                <td>{order.timeStudy}</td>
-                <td>{order.sumPay}</td>
-                <td>{order.dateTime}</td>
-                <td>{order.guid}</td>
+                <tr key={i + 1} onClick={e => {handleGuid(e)}}>
+                    <td>{i + 1}</td>
+                    <td>{order.name}</td>
+                    <td>{order.typeEngeeniring}</td>
+                    <td>{order.timeStudy}</td>
+                    <td>{order.sumPay}</td>
+                    <td>{order.dateTime}</td>
+                    <td key='guid'>{order.guid}</td>
                 </tr>
             ))}
         </tbody>

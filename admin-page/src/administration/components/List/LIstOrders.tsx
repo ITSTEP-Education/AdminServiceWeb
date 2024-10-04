@@ -1,7 +1,8 @@
-import React, {FC, useEffect, useState} from "react";
+import React, {FC, useContext, useEffect, useState} from "react";
 import ListTitle from "./ListTitle";
 import ListRow from "./ListRow";
-import './List.css';
+import './ListOrders.css';
+import { GuidToNoneContext } from "../Admin/Admin";
 
 const ListOrders: FC = () => {
 
@@ -9,8 +10,11 @@ const ListOrders: FC = () => {
     const [display, setDisplay] = useState<string>('none');
     const [btnTitle, setBtnTitle] = useState<string>('ЗАВАНТАЖИТИ');
 
+    const handleGuidToNone = useContext(GuidToNoneContext);
+
     const handleDisplay = () => {
         setIsDisplay(!isDisplay);
+        handleGuidToNone();
     };
 
     useEffect(()=> {   
